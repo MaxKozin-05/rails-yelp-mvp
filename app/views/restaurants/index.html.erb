@@ -1,0 +1,15 @@
+<div class="container p-4 m-4 text-center list-unstyled border shadow">
+<h1>View All Restaurants</h1>
+
+<%= link_to "Create New Restauarant", new_restaurant_path %>
+
+<% @restaurants.each do |r|%>
+  <ul>
+    <div class="list-unstyled border-top p-1">
+    <li><%= link_to r.name, restaurant_path(r) %></li>
+    <li><%= r.address%></li>
+    <li><%= r.category%></li>
+  </div>
+  </ul>
+<%end%>
+</div>
